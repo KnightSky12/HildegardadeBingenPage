@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 0;
+  background-color: #1d1d31;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  min-height: 100vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: #242331;
+  padding: 5px;
+}
+
+.menu ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-bottom: 350px;
+}
+
+.menu li {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 25px;
+}
+
+.menu li:hover {
+  background-color: gray;
+}
+
+.menu li a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.page-initial {
+  background-image: url('./images/HILDEGARDABG.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content div {
+  display: none;
+  animation: fade-in 0.5s ease-in;
+}
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+}
+.sub1,
+.sub2,
+.sub3,
+.sub4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+.textF,
+.textP,
+.textI,
+.textO {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 20px;
+  text-align: justify;
+  color: aliceblue;
+}
+
+.bingen1 {
+  border: 5px solid white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .menu ul {
+    margin-bottom: 0;
+  }
+
+  .menu li {
+    padding: 10px;
+  }
+
+  .page-initial {
+    background-position: top;
+    height: 50vh;
+  }
+
+  .sub1,
+  .sub2,
+  .sub3,
+  .sub4 {
+    font-size: 20px;
+  }
+
+  .textF,
+  .textP,
+  .textI,
+  .textO {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .bingen1 {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .menu-list {
+      display: none;
+  }
+
+  .mobile-menu-btn {
+      display: flex;
+  }
+
+  .content {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+  }
+
+  .content div {
+      display: block;
+      margin-bottom: 20px;
+  }
+}
